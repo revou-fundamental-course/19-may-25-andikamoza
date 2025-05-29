@@ -1,11 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalkulator Suhu</title>
+  <!-- Link ke CSS eksternal -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    
+  <header>
+    <h1>Kalkulator Suhu: Celsius ⇌ Fahrenheit</h1>
+    <p>Aplikasi ini memungkinkan kamu untuk mengonversi suhu dari Celsius ke Fahrenheit atau sebaliknya secara instan dengan hasil dan penjelasan rumus yang akurat.</p>
+  </header>
+
+  <main>
+    <!-- Bagian Formulir Input -->
+    <section aria-labelledby="input-title">
+      <h2 id="input-title">Formulir Input Suhu</h2>
+      <form id="temperatureForm">
+        <label for="temperatureInput">Masukkan nilai suhu:</label>
+        <input type="number" id="temperatureInput" required placeholder="Contoh: 30" />
+
+        <fieldset>
+          <legend>Pilih arah konversi:</legend>
+          <label>
+            <input type="radio" name="conversionType" value="toFahrenheit" checked />
+            Dari Celsius ke Fahrenheit
+          </label>
+          <label>
+            <input type="radio" name="conversionType" value="toCelsius" />
+            Dari Fahrenheit ke Celsius
+          </label>
+        </fieldset>
+
+        <div class="button-group">
+          <button type="submit" id="convertButton">Konversi</button>
+          <button type="button" id="resetButton">Reset</button>
+          <button type="button" id="reverseButton">Reverse</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Bagian Hasil Konversi -->
+    <section aria-labelledby="result-title">
+      <h2 id="result-title">Hasil Konversi</h2>
+      <p id="conversionResult">Belum ada hasil yang ditampilkan.</p>
+    </section>
+
+    <!-- Bagian Penjelasan -->
+    <section aria-labelledby="explanation-title">
+      <h2 id="explanation-title">Penjelasan Konversi</h2>
+      <p id="conversionExplanation">
+        Di bagian ini akan dijelaskan rumus yang digunakan untuk mengubah suhu, baik dari Celsius ke Fahrenheit maupun sebaliknya.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kalkulator Suhu • Dibuat untuk edukasi dan latihan web development.</p>
+  </footer>
+
+  <!-- Link ke JavaScript eksternal -->
+  <script src="js/script.js"></script>
 </body>
 </html>
